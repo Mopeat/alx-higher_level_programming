@@ -9,7 +9,9 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(n - 1))
 
-    if n > 1:
-        for i in range(1, n):
-            print("{} : {}".format(i, sys.argv[i]))
-        i += 1 
+    if n >= 1:
+        i = 0
+        for arg in sys.argv:
+            if i != 0:
+                print("{}: {}".format(i, arg))
+            i += 1
